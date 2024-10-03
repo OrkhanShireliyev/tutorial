@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class TutorialRepositoryImpl implements TutorialRepositoryInter {
+public class TutorialRepositoryImpl implements TutorialRepositoryInter{
 
     private final JdbcTemplate jdbcTemplate;
 

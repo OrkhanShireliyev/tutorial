@@ -1,42 +1,25 @@
 package com.example.springtutorialapp.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
 
-@Getter
-@Setter
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class Tutorial {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private boolean published;
-
-    public Tutorial() {
-    }
-
-    public Tutorial(Long id, String title, String description, boolean published) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.published = published;
-    }
-
-    public Tutorial(String title, String description, boolean published) {
-        this.title = title;
-        this.description = description;
-        this.published = published;
-    }
+    private String imageUrl;
 
 
-    @Override
-    public String toString() {
-        return "Tutorial{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", published=" + published +
-                '}';
-    }
 }
