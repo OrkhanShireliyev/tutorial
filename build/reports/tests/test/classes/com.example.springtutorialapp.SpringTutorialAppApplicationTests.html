@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SpringTutorialAppApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SpringTutorialAppApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.springtutorialapp.html">com.example.springtutorialapp</a> &gt; SpringTutorialAppApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.006s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="contextLoads()"></a>
+<h3 class="failures">contextLoads()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5d00241b testClass = com.example.springtutorialapp.SpringTutorialAppApplicationTests, locations = [], classes = [com.example.springtutorialapp.SpringTutorialAppApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@46ab18da, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1a2e2935, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@aa22f1c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1df98368, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@76b74e9c, org.springframework.boot.test.context.SpringBootTestAnnotation@b45518ff], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [users]
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at app//org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at app//org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at app//org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at app//org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at app//org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at app//org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at app//org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at app//org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [users]
+	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at app//org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 37 more
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [users]
+	at app//org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:135)
+	at app//org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at app//org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98)
+	at app//org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76)
+	at app//org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
+	at app//org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base@17.0.6/java.util.HashMap.forEach(HashMap.java:1421)
+	at app//org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at app//org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at app//org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at app//org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:322)
+	at app//org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at app//org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at app//org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at app//org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 41 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">contextLoads()</td>
+<td class="failures">0.006s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+00:28:11,131 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.8
+00:28:11,133 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Here is a list of configurators discovered as a service, by rank: 
+00:28:11,133 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+00:28:11,133 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+00:28:11,133 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+00:28:11,142 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+00:28:11,142 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+00:28:11,143 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+00:28:11,145 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+00:28:11,145 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+00:28:11,145 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 2 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+00:28:11,145 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+00:28:11,146 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+00:28:11,146 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+00:28:11,149 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/ATL%20Course/SpringTutorialApp/build/resources/main/logback.xml]
+00:28:11,275 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@7829b776 - Adding [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/base.xml] to configuration watch list.
+00:28:11,275 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5778826f - URL [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/base.xml] is not of type file
+00:28:11,279 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@7829b776 - Adding [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/defaults.xml] to configuration watch list.
+00:28:11,279 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5778826f - URL [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/defaults.xml] is not of type file
+00:28:11,283 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word applicationName with class [org.springframework.boot.logging.logback.ApplicationNameConverter]
+00:28:11,283 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+00:28:11,283 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word correlationId with class [org.springframework.boot.logging.logback.CorrelationIdConverter]
+00:28:11,283 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+00:28:11,283 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word wEx with class [org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
+00:28:11,286 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}){faint} %clr(%5p) %clr( ){magenta} %clr(---){faint} %clr(%applicationName[%15.15t]){faint} %clr(){faint}%clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx&quot; substituted for &quot;${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr(%applicationName[%15.15t]){faint} %clr(${LOG_CORRELATION_PATTERN:-}){faint}%clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;windows-1252&quot; substituted for &quot;${CONSOLE_LOG_CHARSET:-${file.encoding:-UTF-8}}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;TRACE&quot; substituted for &quot;${CONSOLE_LOG_THRESHOLD:-TRACE}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p   --- %applicationName[%t] %-40.40logger{39} : %m%n%wEx&quot; substituted for &quot;${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- %applicationName[%t] ${LOG_CORRELATION_PATTERN:-}%-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;windows-1252&quot; substituted for &quot;${FILE_LOG_CHARSET:-${file.encoding:-UTF-8}}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;TRACE&quot; substituted for &quot;${FILE_LOG_THRESHOLD:-TRACE}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;C:\Users\FX506ICB\AppData\Local\Temp\/spring.log&quot; substituted for &quot;${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/spring.log}&quot;
+00:28:11,287 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@7829b776 - Adding [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/console-appender.xml] to configuration watch list.
+00:28:11,287 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5778826f - URL [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/console-appender.xml] is not of type file
+00:28:11,290 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@7829b776 - Adding [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/file-appender.xml] to configuration watch list.
+00:28:11,290 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5778826f - URL [jar:file:/C:/Users/FX506ICB/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.3.4/f06c6950aa5766b63328e821641f5c7d71be819d/spring-boot-3.3.4.jar!/org/springframework/boot/logging/logback/file-appender.xml] is not of type file
+00:28:11,300 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [springProperty] in [ch.qos.logback.classic.LoggerContext]
+00:28:11,300 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [springAppName_IS_UNDEFINED,%X{traceId:-},%X{spanId:-},%X{X-Span-Export:-}] [%thread] %-5level %logger{35} - %msg%n&quot; substituted for &quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [${springAppName},%X{traceId:-},%X{spanId:-},%X{X-Span-Export:-}] [%thread] %-5level %logger{35} - %msg%n&quot;
+00:28:11,300 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [springProfile] in [ch.qos.logback.classic.LoggerContext]
+00:28:11,300 |-WARN in ch.qos.logback.core.model.processor.ImplicitModelHandler - Ignoring unknown property [springProfile] in [ch.qos.logback.classic.LoggerContext]
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to ERROR
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.util.LifecycleBase] to ERROR
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.coyote.http11.Http11NioProtocol] to WARN
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.sshd.common.util.SecurityUtils] to WARN
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.tomcat.util.net.NioSelectorPool] to WARN
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.eclipse.jetty.util.component.AbstractLifeCycle] to ERROR
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.validator.internal.util.Version] to WARN
+00:28:11,303 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.boot.actuate.endpoint.jmx] to WARN
+00:28:11,303 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+00:28:11,304 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+00:28:11,309 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;TRACE&quot; substituted for &quot;${CONSOLE_LOG_THRESHOLD}&quot;
+00:28:11,311 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+00:28:11,311 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}){faint} %clr(%5p) %clr( ){magenta} %clr(---){faint} %clr(%applicationName[%15.15t]){faint} %clr(){faint}%clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx&quot; substituted for &quot;${CONSOLE_LOG_PATTERN}&quot;
+00:28:11,311 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;windows-1252&quot; substituted for &quot;${CONSOLE_LOG_CHARSET}&quot;
+00:28:11,349 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+00:28:11,349 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+00:28:11,353 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;TRACE&quot; substituted for &quot;${FILE_LOG_THRESHOLD}&quot;
+00:28:11,353 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+00:28:11,354 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [springAppName_IS_UNDEFINED,%X{traceId:-},%X{spanId:-},%X{X-Span-Export:-}] [%thread] %-5level %logger{35} - %msg%n&quot; substituted for &quot;${FILE_LOG_PATTERN}&quot;
+00:28:11,354 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;windows-1252&quot; substituted for &quot;${FILE_LOG_CHARSET}&quot;
+00:28:11,354 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;C:/ATL Course/SpringTutorialLogs/big.log&quot; substituted for &quot;${LOG_FILE}&quot;
+00:28:11,358 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;C:/ATL Course/SpringTutorialLogs/big.log.%d{yyyy-MM-dd}.%i.gz&quot; substituted for &quot;${LOGBACK_ROLLINGPOLICY_FILE_NAME_PATTERN:-${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz}&quot;
+00:28:11,358 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;false&quot; substituted for &quot;${LOGBACK_ROLLINGPOLICY_CLEAN_HISTORY_ON_START:-false}&quot;
+00:28:11,358 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;10MB&quot; substituted for &quot;${LOGBACK_ROLLINGPOLICY_MAX_FILE_SIZE:-10MB}&quot;
+00:28:11,358 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;0&quot; substituted for &quot;${LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP:-0}&quot;
+00:28:11,359 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1197721383 - setting totalSizeCap to 0 Bytes
+00:28:11,359 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5b64c4b7 - value &quot;7&quot; substituted for &quot;${LOGBACK_ROLLINGPOLICY_MAX_HISTORY:-7}&quot;
+00:28:11,362 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1197721383 - Archive files will be limited to [10 MB] each.
+00:28:11,364 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1197721383 - Will use gz compression
+00:28:11,365 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1197721383 - Will use the pattern C:/ATL Course/SpringTutorialLogs/big.log.%d{yyyy-MM-dd}.%i for the active file
+00:28:11,369 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@72445aba - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/ATL Course/SpringTutorialLogs/big.log.%d{yyyy-MM-dd}.%i.gz'.
+00:28:11,369 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@72445aba - Roll-over at midnight.
+00:28:11,370 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@72445aba - Setting initial period to 2024-12-02T20:26:07.120Z
+00:28:11,376 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: C:/ATL Course/SpringTutorialLogs/big.log
+00:28:11,376 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [C:/ATL Course/SpringTutorialLogs/big.log]
+00:28:11,378 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+00:28:11,378 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+00:28:11,379 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+00:28:11,379 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@61bcd567 - End of configuration.
+00:28:11,379 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1c80e49b - Registering current configuration as safe fallback point
+00:28:11,379 |-INFO in ch.qos.logback.classic.util.ContextInitializer@3f446bef - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 233 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+2024-12-03T00:28:11.496+04:00  INFO   --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.springtutorialapp.SpringTutorialAppApplicationTests]: SpringTutorialAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-03T00:28:11.616+04:00  INFO   --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.springtutorialapp.SpringTutorialAppApplication for test class com.example.springtutorialapp.SpringTutorialAppApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-12-03T00:28:12.103+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] c.e.s.SpringTutorialAppApplicationTests  : Starting SpringTutorialAppApplicationTests using Java 17.0.6 with PID 8712 (started by FX506ICB in C:\ATL Course\SpringTutorialApp)
+2024-12-03T00:28:12.105+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] c.e.s.SpringTutorialAppApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-12-03T00:28:14.219+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-03T00:28:14.589+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a2a7492
+2024-12-03T00:28:14.593+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-03T00:28:14.806+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.database                       : Set default schema name to public
+2024-12-03T00:28:15.527+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.changelog                      : Reading resource: db.changelog/v1.0/15-11-2024-add-column.xml
+2024-12-03T00:28:15.725+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2024-12-03T00:28:15.788+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-12-03T00:28:15.791+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2024-12-03T00:28:15.809+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2024-12-03T00:28:15.810+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : Run:                          0
+2024-12-03T00:28:15.811+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : Previously run:               1
+2024-12-03T00:28:15.812+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : Filtered out:                 0
+2024-12-03T00:28:15.813+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : -------------------------------
+2024-12-03T00:28:15.813+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : Total change sets:            1
+2024-12-03T00:28:15.814+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.util                           : Update summary generated
+2024-12-03T00:28:15.817+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] liquibase.command                        : Command execution complete
+2024-12-03T00:28:16.029+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-03T00:28:16.180+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-03T00:28:16.271+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-03T00:28:18.648+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-03T00:28:18.683+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-03T00:28:18.687+04:00  INFO 8712 --- [SpringTutorialApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.7</a> at Dec 3, 2024, 12:28:18 AM</p>
+</div>
+</div>
+</body>
+</html>

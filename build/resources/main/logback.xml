@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <property name="LOG_FILE" value="C:/ATL Course/SpringTutorialLogs/big.log" />
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+    <property name="FILE_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [${springAppName},%X{traceId:-},%X{spanId:-},%X{X-Span-Export:-}] [%thread] %-5level %logger{35} - %msg%n"/>
+    <springProfile name="local">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+    <springProfile name="default">
+        <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder>
+                <pattern>${FILE_LOG_PATTERN}</pattern>
+            </encoder>
+<!--            <file>${LOG_FILE}</file>-->
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd-HH}</fileNamePattern>
+                <maxHistory>${maxHistory:-180}</maxHistory>
+            </rollingPolicy>
+        </appender>
+        <logger name="org.springframework" additivity="false">
+            <appender-ref ref="ROLLING-FILE" />
+        </logger>
+        <root level="INFO">
+            <appender-ref ref="ROLLING-FILE"/>
+        </root>
+    </springProfile>
+</configuration>

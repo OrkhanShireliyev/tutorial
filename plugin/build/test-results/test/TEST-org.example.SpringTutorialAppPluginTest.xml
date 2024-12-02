@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.SpringTutorialAppPluginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-02T20:28:07" hostname="ORKHAN" time="8.883">
+  <properties/>
+  <testcase name="pluginRegistersATask()" classname="org.example.SpringTutorialAppPluginTest" time="8.883"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

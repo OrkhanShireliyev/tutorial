@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.SpringTutorialAppPluginFunctionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-02T20:28:18" hostname="ORKHAN" time="7.453">
+  <properties/>
+  <testcase name="canRunTask()" classname="org.example.SpringTutorialAppPluginFunctionalTest" time="7.453"/>
+  <system-out><![CDATA[
+> Task :greeting
+Hello from plugin 'org.example.greeting'
+
+BUILD SUCCESSFUL in 6s
+1 actionable task: 1 executed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
