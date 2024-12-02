@@ -24,7 +24,6 @@ import java.util.UUID;
 
 @Service
 public class S3Service {
-
     private TutorialRepositoryJpa tutorialRepositoryJpa;
     private final AmazonS3 amazonS3;
     private final String bucketName ="bucket-name";
